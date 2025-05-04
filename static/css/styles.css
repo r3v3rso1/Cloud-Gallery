@@ -1,0 +1,188 @@
+/* ===================== */
+/*       Gallery         */
+/* ===================== */
+.gallery-card {
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.image-wrapper {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s;
+}
+
+.image-wrapper:hover img {
+    opacity: 0.9;
+}
+
+/* ===================== */
+/*      Auth Forms       */
+/* ===================== */
+.auth-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.auth-card .card-body {
+    padding: 2.5rem;
+}
+
+.form-floating {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-floating input {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    padding: 1rem 1.25rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.form-floating input:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: 0;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem 1.25rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: all 0.2s ease-in-out;
+    color: #6c757d;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    background: white;
+    padding: 0 0.5rem;
+    color: #0d6efd;
+}
+
+/* ===================== */
+/*      Buttons          */
+/* ===================== */
+.btn-upload,
+.upload-form .btn,
+.auth-card .btn {
+    background: #0d6efd;
+    border: 2px solid #0b5ed7;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-upload:hover,
+.upload-form .btn:hover,
+.auth-card .btn:hover {
+    background: #16a34a !important;
+    border-color: #15803d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
+}
+
+.btn-upload i,
+.upload-form .btn i,
+.auth-card .btn i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* ===================== */
+/*      Alerts           */
+/* ===================== */
+.alert {
+    border-radius: 8px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+}
+
+/* ===================== */
+/*      Responsive       */
+/* ===================== */
+@media (max-width: 576px) {
+    .image-wrapper {
+        height: 160px;
+    }
+    
+    .auth-card {
+        border-radius: 0;
+        margin-top: 1rem;
+    }
+    
+    .auth-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .form-floating input {
+        padding: 0.75rem 1rem;
+        height: calc(3rem + 2px);
+    }
+    
+    .btn-upload,
+    .upload-form .btn,
+    .auth-card .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===================== */
+/*      final fix        */
+/* ===================== */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    color: #0d6efd;
+    background: transparent !important;
+    padding: 0 0.5rem;
+}
+
+
+.form-floating label {
+    color: #6c757d;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+

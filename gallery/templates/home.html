@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Main about section -->
+<section class="about-section py-5 bg-light">
+    <div class="container">
+        <!-- Header section -->
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary mb-3">Cloud Image Gallery</h2>
+            <div class="col-lg-8 mx-auto">
+                <p class="lead mb-4">
+                    Welcome! This image gallery app is a personal project that explores modern cloud development with AWS,
+                    demonstrating key concepts in cloud infrastructure and deployment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature cards row -->
+        <div class="row g-4">
+            <!-- Technical features card -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">
+                            <i class="bi bi-cloud-upload me-2"></i>Technical Features
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">✅ AWS S3 for secure cloud storage</li>
+                            <li class="mb-2">🚀 EC2 instance deployment</li>
+                            <li class="mb-2">🔒 IAM roles management</li>
+                            <li>🌐 Cloud-based architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational context card -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">
+                            <i class="bi bi-book me-2"></i>Educational Context
+                        </h5>
+                        <p>
+                            Personal project developed during my 2nd year of BSc Computer Science studies at
+                            <span class="fw-bold">Dublin City University</span>. Inspired by my interest in 
+                            <span class="fw-bold">Cloud Computing and AWS.</span>
+                        </p>
+                        <div class="alert alert-warning mt-3">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Educational project - free to use for learning purposes!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call-to-action section -->
+        <div class="text-center mt-5">
+            <a href="{% url 'gallery' %}" 
+               class="btn btn-primary btn-lg mt-3">
+                <i class="bi bi-images me-2"></i>View Gallery
+            </a>
+            <!-- Footer credits -->
+            <p class="text-muted mt-2 small">
+                Created by Mykhailo Puhach |
+                <a href="https://github.com/r3v3rso1" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-dark ms-2">
+                    <i class="bi bi-github fs-4"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

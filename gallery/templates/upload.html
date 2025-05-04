@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Image upload</h2>
+    
+    <!-- Form non-field errors -->
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+        {% for error in form.non_field_errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Upload form -->
+    <form method="post" enctype="multipart/form-data" class="upload-form">
+        {% csrf_token %}
+        
+        <!-- Image field errors -->
+        {% if form.image.errors %}
+        <div class="alert alert-danger">
+            {% for error in form.image.errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- File input field -->
+        <div class="form-group mb-3">
+            <label for="id_image" class="form-label">Select File:</label>
+            <input type="file" name="image" required id="id_image" class="form-control-file">
+            <small class="form-text text-muted">
+                Only JPG/PNG files up to 5MB are allowed
+            </small>
+        </div>
+        
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary w-100">Upload</button>
+    </form>
+</div>
+{% endblock %}
